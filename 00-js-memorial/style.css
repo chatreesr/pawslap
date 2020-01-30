@@ -1,0 +1,162 @@
+:root {
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  background: url("images/backdrop.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 20px;
+  height: 100vh;
+}
+
+body * + * {
+  margin-top: 0.5em;
+}
+
+.container {
+  position: absolute;
+  display: block;
+  width: 70%;
+  top: 10%;
+  left: 50%;
+  bottom: 8px;
+  transform: translateX(-50%);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 4px 4px 4px #444;
+  border: 1px solid #777;
+}
+
+.profile {
+  display: block;
+  margin-top: -4rem;
+  text-align: center;
+}
+
+.profile__wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.profile__ribbon {
+  position: absolute;
+  right: 5px;
+  bottom: 10px;
+  z-index: 10;
+}
+
+.profile__image {
+  width: 180px;
+  border-radius: 5px;
+  border: 3px solid #888;
+  box-shadow: 3px 3px 3px #222;
+}
+
+.profile__title {
+  font-size: 2.2em;
+  margin-bottom: 1rem;
+}
+
+.memory {
+  background-color: rgba(150, 150, 150, 0.25);
+  text-align: center;
+  margin-top: 0;
+}
+
+.memory__details,
+.memory__add,
+.memory__name {
+  height: 40px;
+  margin: 8px 8px;
+  padding: 0 4px;
+}
+
+.memory__details,
+.memory__name {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #444;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.memory__details {
+  width: 40%;
+}
+
+.memory__name {
+  width: 15%;
+}
+
+.memory__add {
+  border: none;
+  width: 100px;
+  background-color: rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  transition: border 0.5s;
+  font-size: 1.1rem;
+  padding: 0 4px;
+  box-shadow: 1px 1px 2px #444;
+}
+
+.memory__add:active {
+  transform: translateY(1px);
+}
+
+h2.title {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.memories {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.memory__item {
+  flex: 1 0 100%;
+  margin-top: 0.25rem;
+  text-align: center;
+  font-size: 1.2rem;
+  background-color: rgba(240, 240, 240, 0.35);
+  transition: background-color 0.5s;
+  cursor: pointer;
+}
+
+.memory__item:hover {
+  background-color: rgba(80, 80, 80, 0.25);
+}
+
+.memory__sign {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: rgb(78, 50, 238);
+}
+
+.memory__delete {
+  float: right;
+  margin-right: 20px;
+  font-size: 1.2rem;
+  color: rgb(78, 50, 238);
+  transform: translateY(-8px);
+  transition: transform 0.7s;
+  cursor: pointer;
+}
+
+.memory__delete:hover {
+  transform: scale(1.2) translateY(-6px);
+  color: red;
+}
+
+.memory__delete:active {
+  transform: translateY(1px);
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Memorial</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="profile">
+        <div class="profile__wrapper">
+          <img class="profile__ribbon" src="images/ribbon.png" alt="ribbon" />
+          <img
+            class="profile__image"
+            src="images/profile.jpeg"
+            alt="frederik"
+          />
+        </div>
+
+        <h2 class="profile__title">Grumpy Cat</h2>
+      </header>
+
+      <div class="memory">
+        <input
+          class="memory__details"
+          type="text"
+          placeholder="Write your message here"
+        />
+        <input class="memory__name" type="text" placeholder="Joseph" />
+        <button class="memory__add">
+          Send
+        </button>
+      </div>
+
+      <h2 class="title">Messages: <span class="memory__count">0</span></h2>
+
+      <div class="memories">
+        <!-- 
+        <div class="memory__item">
+          <p class="memory__contents">
+            เราเสียใจที่เธอจากไปเพราะคาโบนาร่าไวรัส
+            <span class="memory__sign">-- ลุงหมี</span>
+            <a class="memory__delete">
+              <i class="icon ion-md-close-circle-outline"></i>
+            </a>
+          </p>
+        </div>
+        -->
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
