@@ -1,0 +1,55 @@
+@keyframes LogoMoveRotate {
+  0% {
+    transform: translateX(30rem) rotate(-35deg);
+    opacity: 0;
+  }
+
+  80% {
+    transform: translateX(-2rem) rotate(20deg);
+  }
+
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes MoveInLeft {
+  0% {
+    transform: translateX(20rem);
+  }
+
+  70% {
+    transform: translateX(-2rem);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes MoveInRight {
+  0% {
+    transform: translateX(-20rem);
+  }
+
+  70% {
+    transform: translateX(2rem);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes MoveUpTop {
+  0% {
+    transform: translateY(10rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
