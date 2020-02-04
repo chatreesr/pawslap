@@ -6,13 +6,13 @@
 .section-adopt {
   background-image: linear-gradient(
       to right,
-      rgba($color-primary, 0.4),
-      rgba($color-secondary, 0.4)
+      rgba($color-primary, 0.3),
+      rgba($color-secondary, 0.3)
     ),
-    url("../../img/dog-basket-0.jpg");
+    url("../../img/dog-hug.jpg");
   background-size: cover;
   background-position: center;
   margin-top: -15rem;
   padding: 38vh 0;
-  clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 90%);
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 80%);
 }

@@ -44,6 +44,14 @@
     transform: translate(0);
     opacity: 1; } }
 
+@keyframes Pulse {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.5); }
+  100% {
+    transform: scale(1); } }
+
 * {
   margin: 0;
   padding: 0;
@@ -83,7 +91,7 @@ body {
   color: transparent;
   transition: all 0.4s; }
   .heading-secondary:hover {
-    transform: scale(1.3); }
+    transform: scale(1.2); }
 
 .heading-tertiary {
   text-transform: uppercase;
@@ -92,10 +100,10 @@ body {
   font-size: 1.8rem; }
 
 .paragraph {
-  font-size: 1.4rem; }
+  font-size: 1.4rem;
+  line-height: 2.5rem; }
 
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
@@ -124,21 +132,23 @@ body {
   height: 100%;
   width: 100%;
   border-radius: 1.5rem;
-  z-index: -1;
-  transition: all 0.3s; }
+  z-index: -2;
+  transition: all 0.3s;
+  background-color: white; }
 
 .btn:hover::after {
-  transform: scale(2.2);
+  transform: scale(1.8);
   opacity: 0; }
+
+.btn--animated {
+  animation: MoveUpTop 1s; }
 
 .btn--white {
   background-color: white; }
 
-.btn--flashy {
-  background-image: linear-gradient(to right bottom, rgba(192, 58, 43, 0.4), rgba(141, 68, 173, 0.4)); }
-
-.btn--animated {
-  animation: MoveUpTop 1s; }
+.btn-link {
+  font-size: 1.6rem;
+  text-decoration: none; }
 
 .collection {
   position: relative;
@@ -171,34 +181,53 @@ body {
     filter: grayscale(0.8); }
 
 .petcard {
-  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 25rem;
   padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.25);
-  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(1rem);
-  border-radius: 4px;
-  width: 80%; }
+  border-radius: 3px;
+  box-shadow: 3px 3px 3px #444;
+  text-align: center;
+  transition: all 0.3s; }
   .petcard__photo {
-    width: 100%;
-    border-radius: 4px;
-    margin-bottom: 1rem; }
-  .petcard__title {
-    font-size: 2rem;
-    letter-spacing: 10px;
-    background-image: linear-gradient(to right, #c03a2b, #8d44ad);
+    height: 18rem;
+    background-size: cover;
+    margin-bottom: 1.5rem;
+    clip-path: ellipse(73% 53% at 47% 35%); }
+    .petcard__photo--1 {
+      background-image: linear-gradient(to right, rgba(192, 58, 43, 0.3), rgba(141, 68, 173, 0.3)), url("../../img/cat-3.jpg"); }
+    .petcard__photo--2 {
+      background-image: linear-gradient(to right, rgba(192, 58, 43, 0.3), rgba(141, 68, 173, 0.3)), url("../../img/dog-2.jpg"); }
+    .petcard__photo--3 {
+      background-image: linear-gradient(to right, rgba(192, 58, 43, 0.3), rgba(141, 68, 173, 0.3)), url("../../img/cat-2.jpg"); }
+  .petcard__heart {
+    position: absolute;
     display: inline-block;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    margin-bottom: 1rem; }
-  .petcard__subtitle {
+    font-size: 2.8rem;
+    right: 1rem;
+    top: -3rem;
+    color: red;
+    text-shadow: 2px 2px 2px #444; }
+    .petcard__heart:hover {
+      animation: Pulse 0.8s linear infinite; }
+  .petcard__contents {
+    position: relative;
     font-size: 1.3rem;
-    margin-bottom: 1rem; }
+    margin-bottom: 1.8rem; }
+  .petcard__title {
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem; }
+  .petcard--hangleft {
+    transform: rotate(10deg); }
+  .petcard--hangright {
+    transform: rotate(-10deg); }
+  .petcard:hover {
+    transform: scale(1.2); }
 
 .header {
   height: 95vh;
   position: relative;
-  background-image: linear-gradient(to right, rgba(192, 58, 43, 0.5), rgba(141, 68, 173, 0.5)), url("../img/cat-basket-2.jpg");
+  background-image: linear-gradient(to right, rgba(192, 58, 43, 0.3), rgba(141, 68, 173, 0.3)), url("../img/cat-basket-2.jpg");
   background-size: cover;
   background-position: center;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%); }
@@ -248,9 +277,9 @@ body {
   padding: 20vh 0; }
 
 .section-adopt {
-  background-image: linear-gradient(to right, rgba(192, 58, 43, 0.4), rgba(141, 68, 173, 0.4)), url("../../img/dog-basket-0.jpg");
+  background-image: linear-gradient(to right, rgba(192, 58, 43, 0.3), rgba(141, 68, 173, 0.3)), url("../../img/dog-hug.jpg");
   background-size: cover;
   background-position: center;
   margin-top: -15rem;
   padding: 38vh 0;
-  clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 90%); }
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 80%); }
