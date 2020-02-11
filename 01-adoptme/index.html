@@ -12,6 +12,10 @@
       rel="stylesheet"
     />
     <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link
       href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap"
       rel="stylesheet"
     />
@@ -19,6 +23,33 @@
     <title>Adopt Me</title>
   </head>
   <body>
+    <!-- Navigation & Main menu-->
+    <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox" id="main-menu" />
+      <label for="main-menu" class="navigation__button">
+        <span class="navigation__icon"></span>
+      </label>
+      <div class="navigation__background"></div>
+
+      <nav class="navigation__menubox">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">About adopt.me</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Plan & Pricing</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Pet Gallery</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Professional Team</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Header -->
     <header class="header">
       <div class="header__logo-box">
         <i class="fa fa-paw header__logo"></i>
@@ -35,10 +66,12 @@
         </a>
       </div>
     </header>
+
     <main>
+      <!-- Section: Pethome -->
       <section class="section-pethome">
         <div class="u-center-text u-margin-bottom-large">
-          <h2 class="heading-secondary">
+          <h2 class="heading-secondary heading-secondary--gradient">
             The best place to find your loyal friends
           </h2>
         </div>
@@ -70,11 +103,7 @@
               </p>
             </div>
             <div class="u-center-text u-margin-bottom-large">
-              <h3 class="heading-tertiary">
-                <i class="fa fa-paw"></i>
-                Join adopt.me now for more!
-                <i class="fa fa-paw"></i>
-              </h3>
+              <a href="" class="btn-link">Read more &rarr;</a>
             </div>
           </div>
           <div class="col-1-2">
@@ -99,66 +128,415 @@
         </div>
       </section>
 
-      <section class="section-adopt">
+      <!-- Section: Adopt -->
+      <section class="section-adopt" id="section-adopt">
+        <div class="u-center-text u-margin-bottom-large">
+          <h2 class="heading-secondary">
+            Join now for special benefits!
+          </h2>
+        </div>
         <div class="row">
           <div class="col-1-3">
-            <div class="petcard petcard--hangleft">
-              <div class="petcard__photo petcard__photo--1"></div>
-              <div class="petcard__contents">
-                <div class="petcard__heart"><i class="fa fa-heart"></i></div>
-                <h3 class="petcard__title">Elizabeth</h3>
-                <p class="petcard__subtitle">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Blanditiis itaque, iste libero vero vel deleniti consequatur
-                  harum quam sequi, repudiandae, fuga id expedita magnam! Nulla
-                  doloremque eius aliquid quidem quibusdam!
-                </p>
-              </div>
-              <a href="#" class="btn-link">
-                <i class="fa fa-paw"></i> Adopt <i class="fa fa-paw"></i>
+            <div class="card">
+              <div class="card__photo card__photo--1"></div>
+              <h4 class="card__title card__title--1">
+                Baby
+              </h4>
+              <ul class="card__details">
+                <li class="card__feature">4 health check ups</li>
+                <li class="card__feature">10 free snacks</li>
+                <li class="card__feature">Free text courses</li>
+                <li class="card__feature">Community vet support</li>
+              </ul>
+              <a
+                href="#modal"
+                class="card__pricebox card__pricebox--1 u-margin-top-small"
+              >
+                <span class="card__currency">USD</span>
+                <span class="card__price">10.99</span>
               </a>
             </div>
           </div>
 
           <div class="col-1-3">
-            <div class="petcard">
-              <div class="petcard__photo petcard__photo--2"></div>
-              <div class="petcard__contents">
-                <div class="petcard__heart"><i class="fa fa-heart"></i></div>
-                <h3 class="petcard__title">Jonathan</h3>
-                <p class="petcard__subtitle">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Atque cumque odit voluptate, pariatur, corrupti obcaecati
-                  alias repellat quidem neque architecto, iusto veniam maxime
-                  sint! Sed laborum eveniet ab nesciunt facilis!
-                </p>
-              </div>
-              <a href="#" class="btn-link">
-                <i class="fa fa-paw"></i> Adopt <i class="fa fa-paw"></i>
+            <div class="card">
+              <div class="card__photo card__photo--2"></div>
+              <h4 class="card__title">
+                Adult
+              </h4>
+              <ul class="card__details">
+                <li class="card__feature">8 health check ups</li>
+                <li class="card__feature">20 free snacks</li>
+                <li class="card__feature">Free text & video courses</li>
+                <li class="card__feature">9-5 vet support</li>
+              </ul>
+              <a href="#modal" class="card__pricebox u-margin-top-small">
+                <span class="card__currency">USD</span>
+                <span class="card__price">24.99</span>
               </a>
             </div>
           </div>
-
           <div class="col-1-3">
-            <div class="petcard petcard--hangright">
-              <div class="petcard__photo petcard__photo--3"></div>
-              <div class="petcard__contents">
-                <div class="petcard__heart"><i class="fa fa-heart"></i></div>
-                <h3 class="petcard__title">Annabelle</h3>
-                <p class="petcard__subtitle">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum
-                  doloremque officia repudiandae iure? Voluptatibus, eligendi.
-                  In, animi vero aliquam doloremque velit numquam dolore
-                  perferendis nulla autem aliquid eaque! Accusantium, quae.
-                </p>
-              </div>
-              <a href="#" class="btn-link">
-                <i class="fa fa-paw"></i> Adopt <i class="fa fa-paw"></i>
+            <div class="card">
+              <div class="card__photo card__photo--3"></div>
+              <h4 class="card__title">
+                Basket
+              </h4>
+              <ul class="card__details">
+                <li class="card__feature">Unlimited health check ups</li>
+                <li class="card__feature">Unlimited snacks</li>
+                <li class="card__feature">Free text, video & workshops</li>
+                <li class="card__feature">24/7 Specialized vet support</li>
+              </ul>
+              <a href="#modal" class="card__pricebox u-margin-top-small">
+                <span class="card__currency">USD</span>
+                <span class="card__price">44.99</span>
               </a>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- Section: Team -->
+      <section class="section-team">
+        <div class="u-center-text u-margin-bottom-large">
+          <h2 class="heading-secondary heading-secondary--gradient">
+            Professional team at your service
+          </h2>
+        </div>
+
+        <div class="row">
+          <div class="col-1-3">
+            <div class="profile">
+              <div
+                class="profile__side profile__side--front profile__side--front-1"
+              >
+                <div class="profile__photobox">
+                  <img class="profile__photo" src="../img/ceo.jpg" alt="CEO" />
+                </div>
+                <div class="profile__contents">
+                  <h3 class="profile__name">Irene Ivanov</h3>
+                  <p class="profile__position">CEO</p>
+                  <div class="profile__socials">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="profile__side profile__side--back profile__side--back-1"
+              >
+                <p class="profile__quote">
+                  Do not trust executives unless they're dead.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-1-3">
+            <div class="profile">
+              <div
+                class="profile__side profile__side--front profile__side--front-2"
+              >
+                <div class="profile__photobox">
+                  <img class="profile__photo" src="../img/cto.jpg" alt="CTO" />
+                </div>
+                <div class="profile__contents">
+                  <h3 class="profile__name">Aryana Ketzkie</h3>
+                  <p class="profile__position">CTO</p>
+                  <div class="profile__socials">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="profile__side profile__side--back profile__side--back-2"
+              >
+                <p class="profile__quote">
+                  Don't expect me to lead digital transformation. I'm here for
+                  the cats.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-1-3">
+            <div class="profile">
+              <div
+                class="profile__side profile__side--front profile__side--front-1"
+              >
+                <div class="profile__photobox">
+                  <img
+                    class="profile__photo"
+                    src="../img/hr.jpg"
+                    alt="Human resource expert"
+                  />
+                </div>
+                <div class="profile__contents">
+                  <h3 class="profile__name">Elly Smith</h3>
+                  <p class="profile__position">CFO</p>
+                  <div class="profile__socials">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="profile__side profile__side--back profile__side--back-1"
+              >
+                <p class="profile__quote">
+                  We care about cats and dogs. We don't care about you.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-1-3">
+            <div class="profile">
+              <div
+                class="profile__side profile__side--front profile__side--front-2"
+              >
+                <div class="profile__photobox">
+                  <img
+                    class="profile__photo"
+                    src="../img/vet.jpg"
+                    alt="Human resource expert"
+                  />
+                </div>
+                <div class="profile__contents">
+                  <h3 class="profile__name">Leon Choi</h3>
+                  <p class="profile__position">COO</p>
+                  <div class="profile__socials">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="profile__side profile__side--back profile__side--back-2"
+              >
+                <p class="profile__quote">
+                  I don't trust humans unless they have pets.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-1-3">
+            <div class="profile">
+              <div
+                class="profile__side profile__side--front profile__side--front-1"
+              >
+                <div class="profile__photobox">
+                  <img
+                    class="profile__photo"
+                    src="../img/it.jpg"
+                    alt="Human resource expert"
+                  />
+                </div>
+                <div class="profile__contents">
+                  <h3 class="profile__name">Marc Kennedy</h3>
+                  <p class="profile__position">CIO</p>
+                  <div class="profile__socials">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="profile__side profile__side--back profile__side--back-1"
+              >
+                <p class="profile__quote">
+                  I'm gonna build dog robots one day.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-1-3">
+            <div class="profile">
+              <div
+                class="profile__side profile__side--front profile__side--front-2"
+              >
+                <div class="profile__photobox">
+                  <img
+                    class="profile__photo"
+                    src="../img/creepy.jpg"
+                    alt="Human resource expert"
+                  />
+                </div>
+                <div class="profile__contents">
+                  <h3 class="profile__name">Creepy</h3>
+                  <p class="profile__position">Mental Support</p>
+                  <div class="profile__socials">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="profile__side profile__side--back profile__side--back-2"
+              >
+                <p class="profile__quote">
+                  5$^%&%#@5$GE^&*@%T!!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-center-text u-margin-top-large">
+          <a href="" class="btn-link">Meet our team &rarr;</a>
+        </div>
+      </section>
+
+      <!-- Section: Subscribe -->
+      <section class="section-subscribe">
+        <div class="row">
+          <div class="contact">
+            <div class="contact__form">
+              <div class="u-center-text u-margin-top-large">
+                <h2 class="heading-secondary">
+                  Subscribe to our newsletter
+                </h2>
+              </div>
+              <form class="form">
+                <div class="form__group">
+                  <input
+                    type="text"
+                    class="form__input"
+                    id="name"
+                    placeholder="Full name"
+                    autocomplete="off"
+                  />
+                  <label for="name" class="form__label">Full name</label>
+                </div>
+
+                <div class="form__group">
+                  <input
+                    type="email"
+                    class="form__input"
+                    id="email"
+                    placeholder="Email address"
+                    autocomplete="off"
+                  />
+                  <label for="email" class="form__label">Email address</label>
+                </div>
+
+                <div class="form__group u-center-text">
+                  <a class="btn btn--white">Subscribe &rarr;</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="section-footer">
+      <div class="u-center-text u-margin-bottom-large">
+        <h2 class="heading-secondary">
+          <i class="fa fa-paw"></i> adopt.me foundation
+          <i class="fa fa-paw"></i>
+        </h2>
+      </div>
+
+      <div class="row">
+        <div class="col-1-2">
+          <div class="footer">
+            <h3 class="footer__title">
+              About the company
+            </h3>
+            <p class="footer__description">
+              <span class="footer__quote">L</span> orem ipsum dolor, sit amet
+              consectetur adipisicing elit. At ducimus reprehenderit neque?
+              Perspiciatis dolores dolorem rerum, cumque natus ad, maxime
+              inventore ea repellat sit repudiandae ipsam, facere sed maiores
+              quas. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Unde magnam doloremque totam aspernatur corrupti quod quo
+              perspiciatis at atque laudantium ipsam error placeat animi
+              reprehenderit fuga, nam maxime. Doloribus, aut. Lorem ipsum dolor
+              sit amet consectetur adipisicing elit. Exercitationem sapiente
+              dignissimos quaerat consequuntur repudiandae eveniet ipsum,
+              reprehenderit earum, pariatur enim porro, officia culpa voluptatum
+              nesciunt deleniti placeat? Rem, rerum repellat? Lorem ipsum dolor
+              sit amet consectetur adipisicing elit. Reiciendis quidem in quo
+              officiis adipisci sequi earum exercitationem. Eius harum
+              aspernatur sit aliquid quidem pariatur repudiandae eveniet error
+              quasi ea. Nihil.
+            </p>
+          </div>
+        </div>
+        <div class="col-1-2">
+          <div class="footer">
+            <h3 class="footer__title">
+              Contact
+            </h3>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <i class="fab fa-facebook"></i> Facebook
+              </li>
+              <li class="footer__item">
+                <i class="fab fa-youtube"></i> Youtube
+              </li>
+              <li class="footer__item">
+                <i class="fab fa-instagram"></i> Instagram
+              </li>
+              <li class="footer__item">
+                <i class="fab fa-twitter"></i> Twitter
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+      <div class="modal__contents">
+        <a href="#section-adopt" class="modal__close">
+          &times;
+        </a>
+        <div class="modal__left">
+          <img class="modal__photo" src="../img/smile.jpg" alt="Smile" />
+        </div>
+        <div class="modal__right">
+          <div class="u-center-text u-margin-bottom-medium">
+            <h2 class="heading-secondary heading-secondary--gradient">
+              You made the right choice!
+            </h2>
+          </div>
+
+          <p class="modal__text u-center-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus
+            corrupti ullam, architecto perferendis iste ducimus recusandae
+            voluptas? Impedit, deleniti nihil beatae rem, fugiat temporibus
+            voluptatum deserunt perspiciatis facere excepturi nisi. Lorem ipsum
+            dolor sit amet, consectetur adipisicing elit. Doloribus corrupti
+            ullam, architecto perferendis iste ducimus recusandae voluptas?
+            Impedit, deleniti nihil beatae rem, fugiat temporibus voluptatum
+            deserunt perspiciatis facere excepturi nisi. Lorem ipsum dolor sit
+            amet, consectetur adipisicing elit.
+          </p>
+          <div class="u-center-text u-margin-top-medium">
+            <a href="#" class="btn-link">Pay now &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

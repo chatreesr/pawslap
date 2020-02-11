@@ -13,6 +13,40 @@
   background-size: cover;
   background-position: center;
   margin-top: -15rem;
-  padding: 38vh 0;
-  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 80%);
+  padding: 20rem 0 10rem 0;
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+}
+
+.section-team {
+  padding: 10rem 0;
+  margin: 0 auto;
+}
+
+.section-subscribe {
+  background-image: linear-gradient(
+      to right,
+      rgba($color-primary, 0.3),
+      rgba($color-secondary, 0.3)
+    ),
+    url("../img/cat-0.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 10rem 0;
+
+  & .contact {
+    &__form {
+      border-radius: 2rem;
+      margin: 0 auto;
+      padding: 2rem;
+      width: 60%;
+      background-color: rgba(transparent, 0.15);
+      backdrop-filter: blur(20px);
+      box-shadow: 1.2rem 1.2rem 1.2rem rgba(black, 0.6);
+    }
+  }
+}
+
+.section-footer {
+  background-color: #444;
+  padding: 5rem 0;
 }

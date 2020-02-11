@@ -1,0 +1,74 @@
+.modal {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(black, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:target &__contents {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  &__contents {
+    position: absolute;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 40rem;
+    display: table;
+    transition: all 0.5s;
+    transform: translate(-50%, -50%) scale(0.3);
+  }
+
+  &__left {
+    display: table-cell;
+    width: 40%;
+  }
+
+  &__photo {
+    width: 100%;
+    background-size: cover;
+    padding: 1rem;
+  }
+
+  &__right {
+    display: table-cell;
+    width: 60%;
+    padding: 1rem;
+    vertical-align: middle;
+  }
+
+  &__text {
+    font-size: 1.4rem;
+  }
+
+  &__close {
+    &:link,
+    &:visited {
+      position: absolute;
+      font-size: 5rem;
+      top: -4px;
+      right: 8px;
+      cursor: pointer;
+      transition: all 0.5s;
+      color: #333;
+      text-decoration: none;
+    }
+
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+}

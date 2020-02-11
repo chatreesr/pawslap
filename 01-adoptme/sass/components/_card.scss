@@ -1,0 +1,107 @@
+.card {
+  position: relative;
+  background-color: white;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  height: 50rem;
+  border-radius: 5px;
+  box-shadow: 1rem 1rem 1rem rgba(black, 0.4);
+  overflow: hidden;
+  transition: all 0.2s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &__photo {
+    background-size: cover;
+    background-position: center;
+    height: 25rem;
+    clip-path: ellipse(77% 60% at 50% 40%);
+
+    &--1 {
+      background-image: linear-gradient(
+          to right,
+          rgba($color-primary, 0.25),
+          rgba($color-secondary, 0.25)
+        ),
+        url("../img/baby-plan.jpg");
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+          to right,
+          rgba($color-primary, 0.25),
+          rgba($color-secondary, 0.25)
+        ),
+        url("../img/adult-plan.jpg");
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+          to right,
+          rgba($color-primary, 0.25),
+          rgba($color-secondary, 0.25)
+        ),
+        url("../img/basket-plan.jpg");
+    }
+  }
+
+  &__title {
+    position: absolute;
+    padding: 1rem 0;
+    font-size: 2.5rem;
+    display: block;
+    width: 100%;
+    background-color: rgba(transparent, 0.15);
+    top: 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: #eee;
+  }
+
+  &__details {
+    padding-top: 1rem;
+    font-size: 1.2rem;
+    list-style: none;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    text-transform: uppercase;
+  }
+
+  &__feature {
+    padding: 1rem 0;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #ddd;
+    }
+  }
+
+  &__pricebox {
+    display: inline-block;
+    font-size: 3rem;
+    text-decoration: none;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 0.5rem rgba(black, 0.2);
+    transition: all 0.3s;
+    color: white;
+    background-color: rgba($color-secondary, 0.75);
+
+    &:hover {
+      box-shadow: 0 1rem 1rem rgba(black, 0.2);
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      box-shadow: 0 1rem 1rem rgba(black, 0.2);
+      transform: translateY(0);
+    }
+  }
+
+  &__currency {
+    font-size: 1.2rem;
+  }
+}

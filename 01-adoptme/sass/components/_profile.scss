@@ -1,0 +1,112 @@
+.profile {
+  position: relative;
+  perspective: 200rem;
+  height: 17.5rem;
+  @include clearfix;
+
+  &__side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 17.5rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    backface-visibility: hidden;
+    box-shadow: 0.5rem 0.5rem 0.5rem rgba(black, 0.2);
+    transition: all 0.8s ease;
+
+    &--front {
+      &-1 {
+        background-image: linear-gradient(
+          53deg,
+          $color-primary 0%,
+          $color-primary 35%,
+          #eee 35%
+        );
+      }
+
+      &-2 {
+        background-image: linear-gradient(
+          53deg,
+          $color-secondary 0%,
+          $color-secondary 35%,
+          #eee 35%
+        );
+      }
+    }
+    &--back {
+      &-1 {
+        transform: rotateY(180deg);
+        background-color: $color-primary;
+      }
+
+      &-2 {
+        transform: rotateY(180deg);
+        background-color: $color-secondary;
+      }
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  &__photobox {
+    width: 50%;
+    float: left;
+  }
+
+  &__photo {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    shape-outside: circle(50% at 50% 50%);
+    border: 3px solid white;
+    object-fit: cover;
+  }
+
+  &__contents {
+    float: right;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    transform: translateY(3.5rem);
+  }
+
+  &__name {
+    font-size: 2rem;
+  }
+
+  &__position {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+  }
+
+  &__socials {
+    margin-top: 1.5rem;
+    font-size: 2rem;
+
+    & i {
+      margin: 0 2px;
+    }
+  }
+
+  &__quote {
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 2rem 0;
+  }
+}

@@ -11,11 +11,16 @@
 // components
 @import "components/button";
 @import "components/collection";
-@import "components/petcard";
+@import "components/card";
+@import "components/profile";
+@import "components/form";
+@import "components/modal";
 
 // layouts
+@import "layout/navigation";
 @import "layout/header";
 @import "layout/grid";
+@import "layout/footer";
 
 // pages
 @import "pages/home";
